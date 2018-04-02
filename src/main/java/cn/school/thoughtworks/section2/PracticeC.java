@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 public class PracticeC {
-    Map<String, Integer> countSameElements(List<String> collection1) {
+    public Map<String, Integer> countSameElements(List<String> collection1) {
         Map<String, Integer> sameElementsCount = new HashMap<>();
         for (String element : collection1) {
             //首先判断是否特殊元素，不然不好判断是否此元素是否已经存在于map中

@@ -14,12 +14,12 @@ public class PracticeCTest {
     private PracticeC practiceC = null;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         practiceC = new PracticeC();
     }
 
     @Test
-    public void create_update_collection_should_return_a_new_map_with_element_as_key_and_count_as_value() throws Exception {
+    public void create_update_collection_should_return_a_new_map_with_element_as_key_and_count_as_value() {
         List<String> collection1 = Arrays.asList(
                 "a", "a", "a",
                 "e", "e", "e", "e", "e", "e", "e",

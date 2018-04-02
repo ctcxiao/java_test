@@ -5,6 +5,8 @@ import java.util.stream.Collectors;
 
 public class PracticeA {
     List<String> collectSameElements(List<String> collection1, List<String> collection2) {
-        return collection1.stream().filter(collection2::contains).collect(Collectors.toList());
+        return collection1.stream()
+            .filter(collection2::contains)
+            .collect(Collectors.toList());
     }
 }

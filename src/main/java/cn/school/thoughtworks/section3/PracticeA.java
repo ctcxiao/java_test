@@ -6,11 +6,9 @@ import java.util.Map;
 public class PracticeA {
     Map<String, Integer> createUpdatedCollection(Map<String, Integer> collectionA, Map<String, List<String>> object) {
 
-        for (String element : object.get("value")) {
-            if (collectionA.containsKey(element)) {
-                collectionA.put(element, collectionA.get(element) - 1);
-            }
-        }
+        object.get("value").stream()
+            .filter(collectionA::containsKey)
+            .forEach(e -> collectionA.put(e, collectionA.get(e) - 1));
 
         return collectionA;
     }

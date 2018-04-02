@@ -5,16 +5,13 @@ import java.util.List;
 
 public class PracticeB {
     List<String> collectSameElements(List<String> collection1, List<List<String>> collection2) {
+        PracticeA practiceA = new PracticeA();
         List<String> sameElements = new ArrayList<>();
-        for (List<String> sonList: collection2) {
-            for (String element1: collection1) {
-                for (String sonElement: sonList) {
-                    if (element1.equals(sonElement)){
-                        sameElements.add(element1);
-                    }
-                }
-            }
+
+        for (List<String> list : collection2) {
+            sameElements.addAll(practiceA.collectSameElements(collection1, list));
         }
+
         return sameElements;
     }
 }

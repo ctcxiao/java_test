@@ -14,12 +14,12 @@ public class PracticeCTest {
     private PracticeC practiceC = null;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         practiceC = new PracticeC();
     }
 
     @Test
-    public void collect_same_elements_should_return_an_array_with_same_elements_in_two_collections() throws Exception {
+    public void collect_same_elements_should_return_an_array_with_same_elements_in_two_collections() {
         List<String> collection1 = Arrays.asList("a", "e", "h", "t", "f", "c", "g", "b", "d");
         List<String> list = Arrays.asList("a", "d", "e", "f");
         Map<String,List<String>> collection2 = new HashMap<>();

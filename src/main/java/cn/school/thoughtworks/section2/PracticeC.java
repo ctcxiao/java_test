@@ -34,9 +34,13 @@ public class PracticeC {
     private String[] handleSpecialElement(String element) {
         if (element.contains("-")) {
             return element.split("-");
-        } else if (element.contains(":")) {
+        }
+
+        if (element.contains(":")) {
             return element.split(":");
-        } else if (element.contains("[")) {
+        }
+
+        if (element.contains("[")) {
             String[] tmp_key_value = element.split("\\[");
             String key = tmp_key_value[0];
             String value = tmp_key_value[1].split("]")[0];

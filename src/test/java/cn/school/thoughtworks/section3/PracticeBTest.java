@@ -14,12 +14,12 @@ public class PracticeBTest {
     private PracticeB practiceB = null;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         practiceB = new PracticeB();
     }
 
     @Test
-    public void create_update_collection_should_return_a_new_map_with_element_as_key_and_count_as_value() throws Exception {
+    public void create_update_collection_should_return_a_new_map_with_element_as_key_and_count_as_value() {
         Map<String, Integer> collection1 = new HashMap<String, Integer>() {{
             put("a", 3);
             put("e", 7);

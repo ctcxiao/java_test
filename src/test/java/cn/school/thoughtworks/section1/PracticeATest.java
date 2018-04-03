@@ -9,7 +9,7 @@ import java.util.List;
 import static org.junit.Assert.assertArrayEquals;
 
 public class PracticeATest {
-    PracticeA practiceA = null;
+    private PracticeA practiceA = null;
 
     @Before
     public void beforeEach() {

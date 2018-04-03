@@ -1,20 +1,14 @@
 package cn.school.thoughtworks.section1;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class PracticeB {
     List<String> collectSameElements(List<String> collection1, List<List<String>> collection2) {
-        List<String> sameElements = new ArrayList<>();
-        for (List<String> sonList: collection2) {
-            for (String element1: collection1) {
-                for (String sonElement: sonList) {
-                    if (element1.equals(sonElement)){
-                        sameElements.add(element1);
-                    }
-                }
-            }
-        }
-        return sameElements;
+        PracticeA practiceA = new PracticeA();
+
+        return collection2.stream()
+            .flatMap(e -> practiceA.collectSameElements(collection1, e).stream())
+            .collect(Collectors.toList());
     }
 }

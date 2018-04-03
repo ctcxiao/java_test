@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 public class PracticeC {
-    Map<String, Integer> countSameElements(List<String> collection1) {
+    public Map<String, Integer> countSameElements(List<String> collection1) {
         Map<String, Integer> sameElementsCount = new HashMap<>();
         for (String element : collection1) {
             //首先判断是否特殊元素，不然不好判断是否此元素是否已经存在于map中
@@ -34,9 +34,13 @@ public class PracticeC {
     private String[] handleSpecialElement(String element) {
         if (element.contains("-")) {
             return element.split("-");
-        } else if (element.contains(":")) {
+        }
+
+        if (element.contains(":")) {
             return element.split(":");
-        } else if (element.contains("[")) {
+        }
+
+        if (element.contains("[")) {
             String[] tmp_key_value = element.split("\\[");
             String key = tmp_key_value[0];
             String value = tmp_key_value[1].split("]")[0];
